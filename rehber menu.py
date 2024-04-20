@@ -1,3 +1,60 @@
+import ast
+def kisiekle():
+    ad = input("Kişinin adını giriniz:")
+    no = input("Kişinin numarasını giriniz:")
+    kisi={
+    "Adi" : ad ,
+    "Numarasi" : no
+    }
+    dosya = open("rehber.xx","a")
+    dosya.write(str(kisi))
+    dosya.close()
+
+def listele():
+    xx = open("rehber.xx",)
+    aa = xx.read()
+    print(aa)
+
+import ast
+def ara():
+    with open("rehber.xx","r") as dosya:
+        okunan = dosya.read()
+    cevirilen = ast.literal_eval(okunan)
+    aranan = input("Aranan isim:")
+    for a in cevirilen:
+        if a["Adi"] == aranan:
+            print(a)
+
+import ast
+def duzelt():
+    with open("rehber.xx","r") as dosya:
+        okunan = dosya.read()
+    cevirilen = ast.literal_eval(okunan)
+    aranan = input("Düzeltilecek isim:")
+    dosya.close()
+    with open("rehber.xx","r") as dosya:
+        for a in cevirilen:
+            if a["Adi"] == aranan:
+                print(a)
+            yeniAd = input("Yeni ad:")
+            yeniNo = input("Yeni numara:")
+            a["Adi"]=yeniAd
+            a["Numarasi"]=yeniNo
+        dosya.write(f"{str(a)},")
+
+import ast
+def sil():
+    with open("rehber.xx","r") as dosya:
+        okunan = dosya.read()
+    cevirilen = ast.literal_eval(okunan)
+    aranan = input("Silinecek isim:")
+    dosya.close()
+    with open("rehber.xx","w") as dosya:
+        for a in cevirilen:
+            if a["Adi"] != aranan:
+                dosya.write(f"{str(a)},")
+
+
 def menu():
     print("╔═══════════════════╗")
     print("║ REHBER UYGULAMASI ║")
@@ -10,31 +67,18 @@ def menu():
     print("╚═══════════════════╝")
     secim= input("Buraya yazınız:")
     if secim == "1" :
-        ad = input("Kişinin adını giriniz:")
-        no = input("Kişinin numarasını giriniz:")
-        kisi={
-        "Adi" : ad ,
-        "Numarasi" : no
-        }
-        dosya = open("rehber.xx","a")
-        dosya.write(str(kisi))
-        dosya.close()
-
+        kisiekle()
         menu()
     if secim == "2" :
-        xx = open("rehber.xx",)
-        aa = xx.read()
-        print(aa)
+        listele()
         menu()
     if secim == "3":
-        print("a")
+        ara()
         menu()
     if secim =="4":
-       print("b")
+       duzelt()
        menu()
     if secim =="5":
-        import os
-        os.remove("rehber.xx")
-        print("Rehber başarıyla silinmiştir!")
+        sil()
         menu()
 menu()
