@@ -6,5 +6,8 @@ Uygulamayı açtığımızda rehber uygulaması ekranı bizi karşılamakta. İs
 <img src="proje fotograflari/listeleme.png" alt="Listeleme">
 2 numaraya basarak daha öncesinden kaydettiğimiz kişileri numaralarıyla liste halinde görüyoruz.
 <br>
-<img src="proje fotograflari/silme.png" alt="Silme">
-5 numaraya basarak kaydettiğimiz numaraları silebiliyoruz ve silindiğine dair bir yazı ile karşılaşıyoruz.
+<img src="proje fotograflari/ara.png" alt="Listeleme">
+3 numaraya basarak daha öncesinden kaydettiğimiz kişiye adını yazarak ulaşabiliyoruz.
+<br>
+<img src="proje fotograflari/duzelt.png" alt="Listeleme">
+4 numaraya basarak daha öncesinden kaydettiğimiz kişileri ve numaralarını değiştirip düzeltebiliyoruz.

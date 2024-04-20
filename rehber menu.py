@@ -15,7 +15,6 @@ def listele():
     aa = xx.read()
     print(aa)
 
-import ast
 def ara():
     with open("rehber.xx","r") as dosya:
         okunan = dosya.read()
@@ -25,7 +24,6 @@ def ara():
         if a["Adi"] == aranan:
             print(a)
 
-import ast
 def duzelt():
     with open("rehber.xx","r") as dosya:
         okunan = dosya.read()
@@ -42,7 +40,6 @@ def duzelt():
             a["Numarasi"]=yeniNo
         dosya.write(f"{str(a)},")
 
-import ast
 def sil():
     with open("rehber.xx","r") as dosya:
         okunan = dosya.read()
